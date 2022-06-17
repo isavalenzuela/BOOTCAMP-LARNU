@@ -108,21 +108,89 @@ table {
 
 .moon-left:hover {
   filter: drop-shadow(2px 4px 6px black);
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .moon-left {
   filter: none;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .moon-right {
-  transition: 1s;
+  transition: 0.3s;
   transform: rotate(0deg);
 }
 
 .moon-right:hover {
   filter: hue-rotate(45deg);
-  transition: 1s;
+  transition: 0.3s;
   transform: rotate(180deg);
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4583f7;
+  color: var(--secondary-color);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  transition: 0.3s;
+  background-color: darkslateblue;
+  color: var(--primary-color);
+}
+
+.form-div {
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  padding: 20px;
+}
+
+.form-textarea {
+  width: 80%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.form-label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 1em;
+}
+
+.alien-emoji {
+  animation: alien-movement 1.2s linear infinite;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  cursor: default;
+}
+
+@keyframes alien-movement {
+  0%,
+  100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 5px;
+  }
 }
