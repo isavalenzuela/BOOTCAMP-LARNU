@@ -8,8 +8,35 @@ body {
   background-image: url("fondo.jpg");
 }
 
+.title-container {
+  width: 400px;
+  background: #24303c;
+  padding: 10px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.img-container {
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
 .form-register {
   width: 400px;
+  height: 400px;
   background: #24303c;
   padding: 30px;
   margin: auto;
