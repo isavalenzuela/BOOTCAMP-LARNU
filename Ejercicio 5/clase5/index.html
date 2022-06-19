@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="contact" action="" method="post">
+        <h1>Inicia sesión</h1>
+        <div class="row">
+          <!-- first column -->
+          <div class="column">
+            <fieldset>
+              <input
+                type="email"
+                placeholder="Your email *"
+                name="email"
+                required
+                autofocus
+              />
+            </fieldset>
+            <fieldset>
+              <input
+                type="password"
+                placeholder="Password"
+                name="name"
+                required
+                autofocus
+              />
+            </fieldset>
+            <fieldset>
+              <button type="submit" id="button">Login</button>
+            </fieldset>
+          </div>
+          <!-- second column -->
+        </div>
+      </form>
+    </div>
+
+    <!-- Javascript to initialize the code list -->
+    <script>
+      var input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        separateDialCode: true,
+      });
+    </script>
+  </body>
+</html>
