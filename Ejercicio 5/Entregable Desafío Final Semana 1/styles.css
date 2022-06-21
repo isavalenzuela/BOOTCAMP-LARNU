@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  max-width: 100%;
+  height: auto;
+  background-image: url("login-background.png");
+}
+
+.header-container {
+  margin: 15vh, 40%, 80%, 40%;
+}
+
+.header-img-container {
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+.login-card {
+  margin: auto;
+  width: 350px;
+  height: 350px;
+  border-radius: 16%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.login-input {
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+
+.login-button {
+  background-color: #ffffff;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none #d1d5db solid;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.login-button:hover {
+  background-color: #1f53c5;
+}
+
+.login-button:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.login-button:focus-visible {
+  box-shadow: none;
+}
