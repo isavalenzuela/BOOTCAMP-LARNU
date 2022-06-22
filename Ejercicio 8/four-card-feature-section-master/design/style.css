@@ -1,0 +1,119 @@
+:root {
+  --primary-red: hsl(0, 78%, 62%);
+  --primary-cyan: hsl(180, 62%, 55%);
+  --primary-orange: hsl(34, 97%, 64%);
+  --primary-blue: hsl(212, 86%, 64%);
+  --neutral-verydarkblue: hsl(234, 12%, 34%);
+  --neutral-grayishblue: hsl(229, 6%, 66%);
+  --neutral-verylightgray: hsl(0, 0%, 98%);
+  --font: "Poppins", sans-serif;
+  --font-size: 15px;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--font);
+  font-size: var(--font-size);
+}
+
+/* NO MOVER ESTO */
+
+.header {
+  /* NO MOVER ESTO */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* NO MOVER ESTO */
+  font-family: var(--font);
+  width: 350px;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.header__line-pretitle {
+  font-weight: lighter;
+  font-size: 26px;
+  color: var(--primary-red);
+}
+
+.header__line-title {
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.header__line-description {
+  font-weight: lighter;
+  font-size: smaller;
+  text-align: center;
+}
+
+/* NO MOVER ESTO */
+.container {
+  /* NO MOVER ESTO */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* NO MOVER ESTO */
+  margin: 5%;
+  align-content: center;
+  flex-wrap: wrap;
+  font-family: var(--font);
+}
+/* NO MOVER ESTO */
+
+.container__leftcol,
+.container__centercol,
+.container__rightcol {
+  width: 30%;
+  margin: 5px 5px;
+}
+
+.container__leftcol__supervisor,
+.container__centercol__teambuilder,
+.container__centercol__karma,
+.container__rightcol__calculator {
+  box-shadow: 0px 25px 38px 17px rgba(0, 0, 0, 0.1);
+  border-radius: 5%;
+  padding: 5px;
+}
+
+.container__leftcol__supervisor {
+  border-top: 2px solid var(--primary-cyan);
+}
+
+.container__centercol__teambuilder {
+  border-top: 2px solid var(--primary-red);
+  margin-bottom: 20px;
+}
+
+.container__centercol__karma {
+  border-top: 2px solid var(--primary-orange);
+}
+
+.container__rightcol__calculator {
+  border-top: 2px solid var(--primary-blue);
+}
+
+.container__leftcol__supervisor-img,
+.container__centercol__teambuilder-img,
+.container__centercol__karma-img,
+.container__rightcol__calculator-img {
+  font-family: var(--font);
+  font-weight: 200;
+  line-height: 2;
+  text-align: right;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: flex-end;
+}
