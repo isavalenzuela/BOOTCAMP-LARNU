@@ -22,8 +22,8 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 6vh);
   background-color: var(--background);
   border-top: 5px solid var(--white);
   border-bottom: 5px solid var(--white);
@@ -34,7 +34,6 @@ body {
 .net {
   height: 100vh;
   grid-column-start: 6;
-  width: 100vw;
   border-left: 5px dashed var(--white);
 }
 .score {
