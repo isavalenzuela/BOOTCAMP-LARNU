@@ -34,18 +34,20 @@
   margin-top: 10%;
 }
 
-.header__line-pretitle {
+.header__pretitle {
   font-weight: lighter;
   font-size: 26px;
   color: var(--primary-red);
+  margin: 0;
 }
 
-.header__line-title {
+.header__title {
   font-weight: bolder;
   font-size: 26px;
+  margin: 0;
 }
 
-.header__line-description {
+.header__description {
   font-weight: lighter;
   font-size: smaller;
   text-align: center;
@@ -69,7 +71,7 @@
 .container__leftcol,
 .container__centercol,
 .container__rightcol {
-  width: 30%;
+  width: 250px;
   margin: 5px 5px;
 }
 
