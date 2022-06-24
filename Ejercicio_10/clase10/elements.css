@@ -1,0 +1,48 @@
+
+* {
+  margin: 0;
+}
+
+p::first-letter {
+  color: red;
+  font-size: 2em;
+}
+
+p:after {
+  content: " adios";
+  color: red;
+}
+
+.different:first-line {
+  color: purple;
+  font-weight: 700;
+}
+
+p.different:first-letter {
+  color: green;
+  font-size: 2em;
+}
+
+.test::before {
+  content:"before is here ";
+  color:red;
+}
+
+
+
+
+/* p::after {
+  content: "Bye"
+}
+
+p:before {
+  content: "adios"
+}
+p.different:before {
+  content: "hola"
+}
+
+.test::before {
+  content:"before is here ";
+  color:red;
+} */

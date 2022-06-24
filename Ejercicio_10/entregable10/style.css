@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  outline: 1px solid limegreen !important;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* transition css
+.box {
+  background-color: black;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  display: none;
+  transition-property: background-color, width;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition-delay: 1s;
+  transition:  background-color, width 1s ease-in-out;
+}
+
+.box:active {
+  background-color: purple;
+  
+  width: 200px;
+  border-radius: 999px;
+} */
+
+.circle {
+  background-color: black;
+  border-radius: 50%;
+  animation-name: change-color-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  /* 0 -> 100 | 0 -> 100*/
+  animation-direction: reverse;
+  /* 100 -> 0 */
+  animation-direction: alternate;
+  /* 0 -> 100 -> 0  > 1 */
+  /* animation-direction: alternate-reverse; */
+  /* 100 -> 0 -> 100  > 1 */
+  /* 
+    animation-fill-mode: forwards; 
+  que propiedades tendrá el elemento al despues de la animación */
+
+  /* animation-fill-mode: backwards;
+  que propiedades tendrá el elemento al antes de la animación */
+
+  /* animation-fill-mode: both;
+  que propiedades tendrá el elemento al antes y despues de la animación */
+  /* animation-delay: 2s; */
+  grid-area: 15 / 2 / 16 / 3;
+  overflow: hidden;
+  justify-items: center;
+  font-size: 200%;
+}
+
+.grid {
+  display: grid;
+  background-color: black;
+  height: 80vh;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+
+.net {
+  background-color: white;
+  grid-area: 1 / 16 / 16 / 17;
+}
+
+.player1 {
+  background-color: white;
+  border-radius: 10px;
+  grid-area: 13 / 1 / 16 / 2;
+  animation-name: player1-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.player2 {
+  background-color: white;
+  border-radius: 10px;
+  grid-area: 1 / 30 / 4 / 31;
+  animation-name: player2-move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes player1-move {
+  0% {
+    transform: translate(0px, 0px);
+    background-color: aqua;
+  }
+  100% {
+    transform: translateY(-40vh);
+  }
+}
+
+@keyframes player2-move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translateY(60vh);
+    background-color: aqua;
+  }
+}
+
+@keyframes change-color-move {
+  0% {
+    background-color: greenyellow;
+    filter: hue-rotate(45deg);
+    transform: rotate(180deg);
+  }
+
+  50% {
+    background-color: greenyellow;
+    transform: translateX(60vw) translateY(-75vh);
+    filter: drop-shadow(2px 4px 6px rgb(254, 254, 254));
+    transition: 0.3s;
+  }
+
+  100% {
+    background-color: greenyellow;
+    transform: translateX(100vw) translateY(-20vh);
+  }
+}

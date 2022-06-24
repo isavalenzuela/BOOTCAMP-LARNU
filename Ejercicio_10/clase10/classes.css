@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  outline: 1px solid limegreen !important;
+}
+
+button {
+  width: 30vw;
+  height: 20vh;
+  background-color: #00bfff;
+  border-radius: 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: wheat;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button:hover::after {
+  background-image: url('../alien_icon.png');
+  background-size: 100% 100%;
+  display: inline-block;
+  width: 8vw; 
+  height: 12vh;
+  content:"";
+}
+
+.button:hover p {
+  color: #00bfff;
+}
+
+button:active {
+  background-color: purple;
+}
+
+button:focus {
+  background-color: #0037ff;
+}
+
+/* example */
+p:hover span {
+  display: none;
+}
+
+p:hover::before {
+  content: "Second text appears instead!";
+  color: red;
+}
+
+p:hover::after {
+  content: "estoy al final!";
+  color: red;
+}
+
+a {
+  color: blue;
+}
+
+a:visited {
+  color: #00bfff;
+}
+
+
+
