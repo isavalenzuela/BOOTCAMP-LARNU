@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  outline: 1px solid limegreen !important;
+  /* outline: 1px solid limegreen !important; */
   margin: 0;
   padding: 0;
 }
@@ -127,7 +127,7 @@ body {
   50% {
     background-color: greenyellow;
     transform: translateX(60vw) translateY(-75vh);
-    filter: drop-shadow(2px 4px 6px rgb(254, 254, 254));
+    filter: drop-shadow(2px 4px 10px rgb(254, 254, 254));
     transition: 0.3s;
   }
 
