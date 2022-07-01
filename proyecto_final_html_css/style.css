@@ -139,6 +139,11 @@ h1 {
 p {
   font-size: 26px;
   text-shadow: 5px 5px 8px gray;
+  box-sizing: border-box;
+}
+
+.p__about {
+  max-width: 80%;
 }
 
 input[type="text"],
