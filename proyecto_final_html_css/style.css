@@ -5,11 +5,21 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-size: 100%;
   font-family: "Arima", cursive;
+  height: 100%;
+}
+
+#background {
+  background-image: url(images/pexels-luis-dalvan.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .responsive {
@@ -57,10 +67,12 @@ header {
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .menu__item:hover {
-  color: #88d498;
+  color: white;
   background-color: #f0a202;
   transition: 0.3s;
   cursor: pointer;
@@ -71,10 +83,6 @@ section {
   float: left;
   height: 100vh;
   position: relative;
-}
-
-#home {
-  background-color: #93e5ab;
 }
 
 #about {
@@ -125,10 +133,12 @@ section {
 
 h1 {
   font-size: 100px;
+  text-shadow: 5px 5px 8px gray;
 }
 
 p {
   font-size: 26px;
+  text-shadow: 5px 5px 8px gray;
 }
 
 input[type="text"],
@@ -146,6 +156,7 @@ label {
   padding: 12px 12px 12px 0;
   display: inline-block;
   font-size: 20px;
+  font-weight: bold;
 }
 
 input[type="submit"] {
@@ -163,4 +174,11 @@ input[type="submit"]:hover {
   background-color: #f0a202;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.footer__text {
+  background-color: transparent;
+  text-align: center;
+  color: #27187e;
+  font-size: 12px;
 }
