@@ -6,54 +6,53 @@
 
 /* Tipos de Variables en js */
 
-var numberVar = 1
+var numberVar = 1;
 console.log(numberVar)
 
-var stringVar = 'hola'
+var stringVar = 'hola';
 console.log(stringVar)
 
-var booleanVar = true
+var booleanVar = true;
 console.log(booleanVar)
 
-var arrayVar = ['uno', 'dos', 'tres']
+var arrayVar = ['uno', 'dos', 'tres'];
 console.log(arrayVar)
 
-var objVar = {nombre:'Juanito', apellido:'Pérez', edad:30}
+var objVar = { nombre: 'Juanito', apellido: 'Pérez', edad: 30 };
 console.log(objVar)
 
-let x = 5
+let x = 5;
 console.log(x)
 
-{
-  let y = 8;
-  console.log(y)
-}
 
-const dog = {nombre: 'Michael Scott',raza:'quiltro', edad: '2 años', crias: 0}
+let y = 8;
+console.log(y)
+
+const dog = { nombre: 'Michael Scott', raza: 'quiltro', edad: '2 años', crias: 0 };
 
 /* Operadores matemáticos */
 
-var a = 10;
-var b = 5;
+var number01 = 10;
+var number02 = 5;
 
-console.log(a+b)
-console.log(a-b)
-console.log(a*b)
-console.log(a/b)
-console.log(a%b)
-console.log(a**b)
+console.log(number01+number02)
+console.log(number01-number02)
+console.log(number01*number02)
+console.log(number01/number02)
+console.log(number01%number02)
+console.log(number01**number02)
 
 /* Negaciones y Falsys */
 
-var c = null;
-var d = 0;
-var e = false;
-var f = "";
+var falsy01 = null;
+var falsy02 = 0;
+var falsy03 = false;
+var falsy04 = "";
 
-console.log(c)
-console.log(d)
-console.log(e)
-console.log(f)
+console.log(falsy01)
+console.log(falsy02)
+console.log(falsy03)
+console.log(falsy04)
 
 /* operadores and y or (tabla de la verdad y tabla de la verdad disyuntiva) */
 
