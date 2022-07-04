@@ -25,8 +25,8 @@ let x = 5
 console.log(x)
 
 {
-    let y = 8;
-    console.log(y)
+  let y = 8;
+  console.log(y)
 }
 
 const dog = {nombre: 'Michael Scott',raza:'quiltro', edad: '2 años', crias: 0}
