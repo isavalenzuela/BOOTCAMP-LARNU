@@ -22,7 +22,7 @@ const boxer3 = {
   name: 'Vasiliy Lomachenko',
   level: 3,
   sparring: true
-  }
+}
 
 
 if (boxer.sparring) {
@@ -83,7 +83,7 @@ const boxer3 = {
   sparring: true
   }
 
-let boxersArray = [boxer1, boxer2, boxer3]
+let boxersArray = [boxer1, boxer2, boxer3];
 
 if (boxer.sparring) {
   console.log(`${boxer.name} quiere hacer sparring`);
