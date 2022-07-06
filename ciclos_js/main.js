@@ -1,13 +1,13 @@
-console.log("Ejercicio de Ciclos en JS")
+console.log("Ejercicio de Ciclos en JS");
 
-console.log("Ciclos for y while con continue y break")
+console.log("Ciclos for y while con continue y break");
 
 // cuánta comida debe comer un gato al día
 
 let catName = 'Cósmico';
 let timesFed = 0;
 
-for (let i = 0; i<5; i++) {
+for (let i = 0; i < 5; i++) {
   //esto es innecesario si empezamos con i == 1
   if ( i == 0 ) {
     continue
@@ -17,7 +17,7 @@ for (let i = 0; i<5; i++) {
     console.log(`${catName} cat is still hungry, he only had food ${timesFed} times today`)
     continue
   }
-  if ( timesFed==3 ) {
+  if ( timesFed == 3 ) {
     console.log(`Stop giving him food, ${catName} can't have food ${i} times a day`)
     break
   }
