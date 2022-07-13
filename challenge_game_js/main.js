@@ -128,6 +128,22 @@ const attack = (defenderKind, attackDamage) => {
   //de lo contrario, dog
   let defender = defenderKind == "cat" ? cat : dog;
 
+  if (defender.kind == "cat") {
+    document.getElementById("first-player-container").className += " shake";
+    setTimeout(() => {
+      document
+        .getElementById("first-player-container")
+        .classList.remove("shake");
+    }, 500);
+  } else {
+    document.getElementById("second-player-container").className += " shake";
+    setTimeout(() => {
+      document
+        .getElementById("second-player-container")
+        .classList.remove("shake");
+    }, 500);
+  }
+
   defender.receiveDamage(attackDamage);
   updateHP();
 
