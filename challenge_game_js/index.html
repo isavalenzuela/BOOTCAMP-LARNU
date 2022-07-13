@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Game JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/challenge_game_js/main.js"></script>
+  </head>
+  <body>
+    <header class="title">Challenge Game JS</header>
+    <div class="main-container">
+      <div class="first-player">
+        <div class="player-img">
+          <img src="" alt="" />
+        </div>
+        <p id="p1Name"></p>
+        <div class="player-life">Health Points</div>
+        <button class="player-attack">Attack</button>
+        <button class="player-defense">Defend</button>
+      </div>
+      <div class="second-player">
+        <div class="player-img">
+          <img src="" alt="" />
+        </div>
+        <p id="p2Name"></p>
+        <div class="player-life">Health Points</div>
+        <button class="player-attack" onclick="attack('cat', 5)">Attack</button>
+        <button class="player-defense">Defend</button>
+      </div>
+    </div>
+  </body>
+</html>
