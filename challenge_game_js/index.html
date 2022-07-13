@@ -12,13 +12,14 @@
     <div class="background">
       <header class="title">Challenge Game JS</header>
       <div class="main-container">
+        <!-- First Player -->
         <div class="first-player-container">
           <div class="player-img">
             <img src="/challenge_game_js/images/cat.png" alt="cat" />
           </div>
           <p id="first-player-name"></p>
           <div class="player-life"
-            >Health Points <span id="first-player-hp"></span
+            >Puntos de Vida: <span id="first-player-hp"></span
           ></div>
           <div class="button-container">
             <button
@@ -27,19 +28,35 @@
               onclick="attack('dog', this.value)"
               >Attack</button
             >
-            <button class="player-attack" id="player1-attack2">Attack</button>
+            <button
+              class="player-attack"
+              id="player1-attack2"
+              onclick="attack('dog', this.value)"
+              >Attack</button
+            >
             <br />
-            <button class="player-defense" id="player1-defense1">Defend</button>
-            <button class="player-defense" id="player1-defense2">Defend</button>
+            <button
+              class="player-defense"
+              id="player1-defense1"
+              onclick="defend('cat', this.value)"
+              >Defend</button
+            >
+            <button
+              class="player-defense"
+              id="player1-defense2"
+              onclick="defend('cat', this.value)"
+              >Defend</button
+            >
           </div>
         </div>
+        <!-- Second Player -->
         <div class="second-player-container">
           <div class="player-img">
             <img src="/challenge_game_js/images/dog.png" alt="dog" />
           </div>
           <p id="second-player-name"></p>
           <div class="player-life"
-            >Health Points <span id="second-player-hp"></span
+            >Puntos de Vida: <span id="second-player-hp"></span
           ></div>
           <div class="button-container">
             <button
@@ -48,10 +65,25 @@
               id="player2-attack1"
               >Attack</button
             >
-            <button class="player-attack" id="player2-attack2">Attack</button>
+            <button
+              class="player-attack"
+              id="player2-attack2"
+              onclick="attack('cat', this.value)"
+              >Attack</button
+            >
             <br />
-            <button class="player-defense" id="player2-defense1">Defend</button>
-            <button class="player-defense" id="player2-defense2">Defend</button>
+            <button
+              class="player-defense"
+              id="player2-defense1"
+              onclick="defend('dog', this.value)"
+              >Defend</button
+            >
+            <button
+              class="player-defense"
+              id="player2-defense2"
+              onclick="defend('dog', this.value)"
+              >Defend</button
+            >
           </div>
         </div>
       </div>

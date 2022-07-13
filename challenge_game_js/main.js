@@ -29,6 +29,14 @@ class Player {
     this.lifePoints -= damage;
   }
 
+  receiveDefense(defensePoints) {
+    if (this.lifePoints + defensePoints < 101) {
+      this.lifePoints += defensePoints;
+    } else {
+      this.lifePoints = 100;
+    }
+  }
+
   getLifePoints() {
     return this.lifePoints;
   }
@@ -37,22 +45,22 @@ class Player {
 const catAbilities = {
   attacks: {
     attack1: {
-      name: "arañazo",
-      damage: 10,
+      name: "Arañar",
+      damage: 12,
     },
     attack2: {
-      name: "mordida",
-      damage: 5,
+      name: "Morder",
+      damage: 8,
     },
   },
   defense: {
     defense1: {
-      name: "esconderse",
-      defensePoints: 7,
+      name: "Esconderse",
+      defensePoints: 3,
     },
     defense2: {
-      name: "saltar",
-      defensePoints: 5,
+      name: "Saltar",
+      defensePoints: 1,
     },
   },
 };
@@ -60,39 +68,59 @@ const catAbilities = {
 const dogAbilities = {
   attacks: {
     attack1: {
-      name: "aplastar",
+      name: "Aplastar",
       damage: 8,
     },
     attack2: {
-      name: "mordida",
-      damage: 3,
+      name: "Morder",
+      damage: 12,
     },
   },
   defense: {
     defense1: {
-      name: "ladrar",
-      defensePoints: 2,
+      name: "Ladrar",
+      defensePoints: 1,
     },
     defense2: {
-      name: "correr",
-      defensePoints: 7,
+      name: "Correr",
+      defensePoints: 3,
     },
   },
 };
 
+//los valores de ataque y defensa se sobreescriben con los
+//objetos catAbilities y dogAbilities
 let cat = new Player("Juanito", "cat", 100, 12, 3, 10, 5);
-let dog = new Player("Pedrito", "dog", 80, 15, 5, 12, 5);
+let dog = new Player("Pedrito", "dog", 100, 15, 5, 12, 5);
 
+//ataques y defensas gato al inicio
 let catAttack1 = null;
 let catAttack2 = null;
 let catDefense1 = null;
 let catDefense2 = null;
 
-//faltan los del perro
+//ataques y defensas perro al inicio
 let dogAttack1 = null;
 let dogAttack2 = null;
 let dogDefense1 = null;
 let dogDefense2 = null;
+
+//esta función actualiza puntos de vida
+const updateHP = () => {
+  const player1HP = document.getElementById("first-player-hp");
+  player1HP.innerText = cat.getLifePoints();
+  if (cat.getLifePoints() <= 0) {
+    alert("El juego terminó, gana el perro");
+    location.reload();
+  }
+
+  const player2HP = document.getElementById("second-player-hp");
+  player2HP.innerText = dog.getLifePoints();
+  if (dog.getLifePoints() <= 0) {
+    alert("El juego terminó, gana el gato");
+    location.reload();
+  }
+};
 
 //esta función determina quien defiende y que daño recibe
 const attack = (defenderKind, attackDamage) => {
@@ -101,17 +129,26 @@ const attack = (defenderKind, attackDamage) => {
   let defender = defenderKind == "cat" ? cat : dog;
 
   defender.receiveDamage(attackDamage);
-
-  const player1HP = document.getElementById("first-player-hp");
-  player1HP.innerText = cat.getLifePoints();
-
-  const player2HP = document.getElementById("second-player-hp");
-  player2HP.innerText = dog.getLifePoints();
+  updateHP();
 
   toggleButtons(defenderKind);
 
   console.log(
     `Daño efectuado a ${defender.name}, vida actual: ${defender.lifePoints}`
+  );
+};
+
+const defend = (defenderKind, defensePoints) => {
+  let defender = defenderKind == "cat" ? cat : dog;
+  let attacker = defenderKind == "cat" ? dog : cat;
+
+  defender.receiveDefense(Number(defensePoints));
+  updateHP();
+
+  toggleButtons(attacker.kind);
+
+  console.log(
+    `Vida restaurada a ${defender.name}, vida actual: ${defender.lifePoints}`
   );
 };
 
@@ -132,11 +169,7 @@ const initCombat = () => {
   const player1Name = document.getElementById("first-player-name");
   player1Name.innerText = cat.getName();
 
-  const player1HP = document.getElementById("first-player-hp");
-  player1HP.innerText = cat.getLifePoints();
-
-  const player2HP = document.getElementById("second-player-hp");
-  player2HP.innerText = dog.getLifePoints();
+  updateHP();
 
   catAttack1.value = catAbilities.attacks.attack1.damage;
   catAttack1.innerText = catAbilities.attacks.attack1.name;
@@ -152,6 +185,18 @@ const initCombat = () => {
 
   const player2Name = document.getElementById("second-player-name");
   player2Name.innerText = dog.getName();
+
+  dogAttack1.value = dogAbilities.attacks.attack1.damage;
+  dogAttack1.innerText = dogAbilities.attacks.attack1.name;
+
+  dogAttack2.value = dogAbilities.attacks.attack2.damage;
+  dogAttack2.innerText = dogAbilities.attacks.attack2.name;
+
+  dogDefense1.value = dogAbilities.defense.defense1.defensePoints;
+  dogDefense1.innerText = dogAbilities.defense.defense1.name;
+
+  dogDefense2.value = dogAbilities.defense.defense2.defensePoints;
+  dogDefense2.innerText = dogAbilities.defense.defense2.name;
 };
 
 window.onload = function () {
