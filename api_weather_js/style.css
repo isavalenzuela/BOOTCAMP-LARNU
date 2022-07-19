@@ -67,7 +67,7 @@ body {
   font-size: large;
 }
 
-.app__form {
+.app__div {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -78,7 +78,7 @@ body {
   box-sizing: border-box;
 }
 
-.app__form--input {
+.app__div__input {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -93,30 +93,41 @@ body {
   font-size: 50px;
 }
 
-input[type="search"] {
+input[type="text"] {
   width: 100%;
+  display: flex;
 }
 
-.app__form--button {
-  color: white;
-  background-color: transparent;
+.app__div__button {
   border-radius: 10px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: larger;
   padding: 5px;
-  border: 3px solid rgb(118, 118, 118);
-}
-
-.app__form--button:hover {
-  border: 3px solid rgba(0, 147, 203, 0.8);
-  transition: all 0.5s ease;
+  border: 3px solid white;
   color: azure;
   background-color: rgba(0, 147, 203, 0.8);
 }
 
-@media screen and (max-width: 991px) {
-  .app__form--input {
+.app__div__button:hover {
+  border: 3px solid rgba(0, 147, 203, 0.8);
+  transition: all 0.5s ease;
+  color: rgba(0, 147, 203, 0.8);
+  background-color: white;
+}
+
+@media screen and (max-width: 991px) and (min-width: 351px) {
+  .app__div__input {
     min-width: 200px;
+  }
+
+  .app__div__button {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .app__div__input {
+    width: 100%;
   }
 }
