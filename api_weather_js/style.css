@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.header {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: larger;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Inter", sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgba(0, 147, 203);
+}
+
+.background {
+  background-image: url(/api_weather_js/images/background.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  margin-top: 50px;
+  width: 60vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(8, 115, 164, 0.13);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.app__text {
+  color: rgba(0, 147, 203);
+  margin: 10px;
+  font-weight: 400;
+  font-size: large;
+}
+
+.app__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin: 50px 10px;
+  width: 40vw;
+  box-sizing: border-box;
+}
+
+.app__form--input {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 20vw;
+}
+
+.city-search-label {
+  font-size: 50px;
+}
+
+input[type="search"] {
+  width: 100%;
+}
+
+.app__form--button {
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: larger;
+  padding: 5px;
+  border: 3px solid rgb(118, 118, 118);
+}
+
+.app__form--button:hover {
+  border: 3px solid rgba(0, 147, 203, 0.8);
+  transition: all 0.5s ease;
+  color: azure;
+  background-color: rgba(0, 147, 203, 0.8);
+}
+
+@media screen and (max-width: 991px) {
+  .app__form--input {
+    min-width: 200px;
+  }
+}

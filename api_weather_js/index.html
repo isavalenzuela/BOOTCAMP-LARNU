@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="main-container background">
+      <header class="header"><h1>App del Clima 😎</h1></header>
+      <div class="app">
+        <p class="app__text">Ingresa una ubicación</p>
+        <div class="app__div">
+          <div class="app__form--input">
+            <label id="city-label" for="city-search" class="city-search-label"
+              >🌃</label
+            >
+            <input
+              type="text"
+              id="city-input"
+              name="city-search"
+              placeholder="¿Qué ciudad estás buscando?"
+            />
+          </div>
+          <br />
+          <button class="app__form--button" onclick="searchCityByInput()"
+            >Buscar</button
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
