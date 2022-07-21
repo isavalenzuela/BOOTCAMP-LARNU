@@ -9,9 +9,11 @@ function getCityByUserInput(userInput) {
   const headers = {
     "X-Api-Key": API_NINJA_KEY,
   };
-  return axios
-    .get(`${API_CITY_URL}${userInput}`, { headers })
-    .then((response) => response.data);
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${API_CITY_URL}${userInput}`, { headers })
+      .then((response) => resolve(response.data));
+  });
 }
 
 //obtiene weather en base al input normalizado
@@ -19,9 +21,11 @@ function getWeatherByCity(city) {
   const headers = {
     "X-Api-Key": API_NINJA_KEY,
   };
-  return axios
-    .get(`${API_WEATHER_URL}${city}`, { headers })
-    .then((response) => response.data);
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${API_WEATHER_URL}${city}`, { headers })
+      .then((response) => resolve(response.data));
+  });
 }
 
 /* window.onload = async function () {
@@ -32,6 +36,21 @@ function getWeatherByCity(city) {
 
 async function searchCityByInput() {
   const userInput = document.getElementById("city-input").value;
+
+  if (userInput.length <= 0) {
+    alert("Ingresa una ciudad");
+    return;
+  }
+
+  const app = document.getElementById("app");
+  app.style.display = "none";
+
+  const appOnLoading = document.getElementById("app--on-loading");
+  appOnLoading.style.display = "flex";
+
+  const lottiePlayer = document.getElementById("loading-img");
+  lottiePlayer.style.display = "block";
+
   const cityResponse = await getCityByUserInput(userInput);
 
   const weatherResponse = await getWeatherByCity(cityResponse[0].name);
