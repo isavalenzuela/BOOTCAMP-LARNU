@@ -3,28 +3,33 @@ import './Card.css'
 
 function Card(props) {
 
-  return (
-      <div className="tarjeta">
-        <div className="tarjeta__imagen">
-          <img
-            className="tarjeta__imagen-background"
-            src={props.background}
-            alt={props.name}
-          />
-          <img
-            className="tarjeta__imagen-icono"
-            src={props.icon}
-            alt={props.name}
-          />
+
+  if (props.name == 'testeo') {
+    return null;
+  } else {
+    console.log(props);
+    return (
+        <div className="card" key={props.key}>
+          <div className="card__image">
+            <img
+              className="card__image-background"
+              src={props.background}
+              alt={props.name}
+            />
+            <img
+              className="card__imagen-icon"
+              src={props.icon}
+              alt={props.name}
+            />
+          </div>
+          <div className="card__parrafo">
+            <h3 className="card__titulo">{props.name}</h3>
+            <p className="card__texto">Total Quizzes: {props.totalQuizzes}</p>
+            <p className="card__texto">User: {props.users}</p>
+          </div>
         </div>
-        <div className="tarjeta__parrafo">
-          <h3 className="tarjeta__titulo">{props.name}</h3>
-          <p className="tarejta__texto">Total Quizzes: {props.totalQuizzes}</p>
-          <p className="tarejta__texto">User: {props.users}</p>
-          <a href="https://larnu.app/" target="_blank"  className="btn btn-primary">Go to Larnu</a>
-        </div>
-      </div>
   );
+    }
 }
 
 export default Card;

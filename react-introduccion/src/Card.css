@@ -1,31 +1,39 @@
-.tarjeta {
+* {
+  font-family: sans-serif;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+.card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 15rem;
+  max-height: 20rem;
   text-align: center;
   border-radius: 10%;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 16px
 }
 
-.tarjeta:hover {
+.card:hover {
   transform: scale(1.1);
   z-index: 10;
 }
 
-.tarjeta__imagen {
+.card__image {
   position: relative;
   max-height: 230px;
 }
 
-.tarjeta__imagen-background {
-  max-width: 100%;
+.card__image-background {
+  width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.tarjeta__imagen-icono {
+.card__imagen-icon {
   position: absolute;
   width: 150px;
   top: calc(50% - 75px);
@@ -33,14 +41,14 @@
   z-index: 10;
 }
 
-.tarjeta:hover .tarjeta__imagen-icono {
+.card:hover .card__imagen-icon {
   -webkit-animation: float 2s linear infinite backwards;
   animation: float 2s linear infinite backwards;
 }
 
-.tarjeta__parrafo {
+.card__parrafo {
   padding: 1rem;
-  font-size: .9rem;
+  font-size: 16px;
 }
 
 .btn {
@@ -51,10 +59,15 @@
   color: black;
 }
 
-.tarjeta__titulo {
+.card__titulo {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow: hidden;
   font-size: 1.1rem;
+}
+
+.card__texto {
+  font-family: sans-serif;
+  font-weight: 500;
 }

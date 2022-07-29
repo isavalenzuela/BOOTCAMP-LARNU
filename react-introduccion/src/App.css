@@ -13,11 +13,12 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App-body {
+  background-color: white;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-navbar {
+  background-color: white;
+  font-size: 36px;
 }
