@@ -39,7 +39,7 @@ function App() {
         onChange={e => setNewItem(e.target.value)}
       />
       
-      <button onClick={() => addItem()}>Add</button>
+      <button onClick={() => addItem()}>Agregar</button>
 
       <ul>
         {items.map(item => {

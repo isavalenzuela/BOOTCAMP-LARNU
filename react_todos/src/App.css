@@ -1,5 +1,16 @@
 .App {
+  box-sizing: content-box;
   text-align: center;
+  align-self: center;
+  align-items: center;
+  margin: 20vh;
+  padding: 2em;
+  border: 2px solid aliceblue;
+  border-radius: 15px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .App-logo {
@@ -44,10 +55,16 @@ input {
 
 ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 60vh;
 }
 
 li {
   margin: 12px 0;
+
 }
 
 .delete-button {
