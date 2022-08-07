@@ -1,8 +1,8 @@
 
 import './App.css';
 import Box from './Box';
-import Counter from './Counter';
 import { useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
 
@@ -10,18 +10,32 @@ function App() {
     console.log('App');
   });
 
-  function boxClicked() {
+  const [count, updateCount] = useState(0);
+
+  function boxClicked(brother) {
     console.log('boxClicked');
+    updateCount(count + 1);
+    if (brother === 1) {
+      updateCount1(count1 + 1);
+    } else {
+      updateCount2(count2 + 1);
+    }
   }
+
+  const [count1, updateCount1] = useState(0);
+  const [count2, updateCount2] = useState(0);
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header"> Callback en componentes hijos
       </header>
       <div className="boxes">
-        <Box className="box" boxClicked={boxClicked}/>
+        <Box id={1} brotherCount={count2} boxClicked={boxClicked}/>
+        <Box id={2} brotherCount={count1} boxClicked={boxClicked}/>
       </div>
-      <Counter/>
+      <div className="boxes-parent">
+        <p>Contador padre: {count} </p>
+      </div>
     </div>
   );
 }

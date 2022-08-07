@@ -3,9 +3,21 @@
   outline: 2px solid black;
   color: black;
   background-color: white;
-  width: 100px;
-  height: 100px;
+  max-width: 250px;
+  height: 250px;
   text-align: center;
   border-radius: 10%;
   margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.box1 p {
+  width: 100%;
 }
