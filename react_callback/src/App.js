@@ -6,6 +6,9 @@ import { useState } from 'react';
 
 function App() {
 
+  const [count1, updateCount1] = useState(0);
+  const [count2, updateCount2] = useState(0);
+
   useEffect( () => {
     console.log('App');
   });
@@ -22,8 +25,7 @@ function App() {
     }
   }
 
-  const [count1, updateCount1] = useState(0);
-  const [count2, updateCount2] = useState(0);
+
 
   return (
     <div className="App">
