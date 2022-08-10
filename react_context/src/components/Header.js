@@ -7,9 +7,11 @@ export default function Header() {
 
   const context = useContext(UserContext);
 
+  const { user, todos } = context;
+  const [todoList, _] = todos;
   return (
     <div>
-      <h1>Hola: {context.user[0]}</h1>
+      <h1>Hola: {user[0]} todos: {todoList.length}</h1>
     </div>
   );
 }
