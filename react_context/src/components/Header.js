@@ -5,7 +5,7 @@ import useUser from "../hooks/useUser";
 
 export default function Header() {
 
-  const context = useContext(UserContext);
+  const context = useUser();
 
   const { user, todos } = context;
   const [todoList, _] = todos;
