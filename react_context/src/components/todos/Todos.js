@@ -3,17 +3,14 @@ import useUser from '../../hooks/useUser';
 
 export default function Todos() {
 
-const context = useUser();
-//preguntar
-const {todos} = context;
-const [todoList, setTodos] = todos;
+const {todos} = useUser();
 
   return (
     <div>
       <h1>ToDos</h1>
       <Todoform/>
       {
-        todoList.map((todo, index) => {
+        todos.map((todo, index) => {
           return <p key={index}>{todo}</p>
         })
       }

@@ -5,20 +5,21 @@ import useTodos from "../hooks/useTodos";
 function UserContextProvider({children}) {
 
   const [user, setUser] = useState(null);
-  const [todos, setTodos] = useTodos();
+  const { todos, updateTodos } = useTodos();
 
   const updateUser = (user) => {
     setUser(user);
   }
 
-  const userData = {
-    user: [user, setUser],
-    todos: [todos, setTodos]
-  }
-
-
   return (
-    <UserContext.Provider value={userData}>
+    <UserContext.Provider value={{
+      user,
+      setUser,
+      todos,
+      updateTodos,
+      updateUser
+    }}
+    >
       {children}
     </UserContext.Provider>
   )

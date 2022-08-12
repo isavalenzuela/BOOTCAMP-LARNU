@@ -2,14 +2,12 @@ import { useState } from "react";
 import useUser from "../../hooks/useUser";
 
 export default function Todoform() {
-  const context = useUser();
-  const { todos } = context;
-  const [todoList, setTodoList] = todos;
+  const { updateTodos } = useUser();
   const [newItem, setNewItem] = useState('');
 
   function addTodo(e) {
     e.preventDefault();
-    setTodoList(newItem);
+    updateTodos(newItem);
     setNewItem('');
   }
 
